@@ -5,9 +5,6 @@
 # choose ubuntu? (add link)
 # sizes, comp, etc.
 
-# connect...
-# ssh -i for-blast.pem  ubuntu@54.200.89.27
-
 # getting the script
 # TODO upload it and write a wget
 
@@ -22,11 +19,8 @@ echo "Updating the system and installing packages:"
 sudo apt-get update
 sudo apt-get dist-upgrade
 sudo apt-get upgrade
-sudo apt-get install make
-sudo apt-get install gcc
-sudo apt-get install perl-doc
-sudo apt-get install liblist-moreutils-perl
-sudo apt-get install git
+sudo apt-get install python  # test
+sudo apt-get install make gcc perl-doc libblas-dev liblist-moreutils-perl git liblapack-dev gfortran python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose
 
 # python
 echo "Downloading Python2.7.11:"
