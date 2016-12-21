@@ -20,29 +20,29 @@ sudo apt-get update
 sudo apt-get dist-upgrade
 sudo apt-get upgrade
 sudo apt-get install python  # test
-sudo apt-get install make gcc perl-doc libblas-dev liblist-moreutils-perl git liblapack-dev gfortran python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose
+sudo apt-get install make gcc perl-doc libblas-dev liblist-moreutils-perl git liblapack-dev gfortran python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose python-pip
 
 # python
-echo "Downloading Python2.7.11:"
-cd ~
-wget https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tgz
-tar xfz Python-2.7.11.tgz
-rm Python-2.7.11.tgz
-cd Python-2.7.11/
-echo "Installing Python2.7.11:"
-./configure --prefix /usr/local/lib/python2.7.11 --enable-ipv6
-make
-sudo make install
+# echo "Downloading Python2.7.11:"
+# cd ~
+# wget https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tgz
+# tar xfz Python-2.7.11.tgz
+# rm Python-2.7.11.tgz
+# cd Python-2.7.11/
+# echo "Installing Python2.7.11:"
+# ./configure --prefix /usr/local/lib/python2.7.11 --enable-ipv6
+# make
+# sudo make install
 # test:
-pythonver=`/usr/local/lib/python2.7.11/bin/python -V 2>&1`
-if [ "$pythonver" = "Python 2.7.11" ] 
-then 
-	echo "$pythonver installed successfully!"
-else
-	echo "Problem with installing $pythonver!"
-	echo "Quitting."
-	exit 1
-fi
+# pythonver=`/usr/local/lib/python2.7.11/bin/python -V 2>&1`
+# if [ "$pythonver" = "Python 2.7.11" ] 
+# then 
+# 	echo "$pythonver installed successfully!"
+# else
+# 	echo "Problem with installing $pythonver!"
+# 	echo "Quitting."
+# 	exit 1
+# fi
 
 # download blast
 echo "Downloading BLAST+:"
@@ -56,10 +56,10 @@ export PATH=$PATH:/home/ubuntu/ncbi-blast-2.5.0+/bin
 
 # updating environment variables
 echo "Adding environment variables to path..."
-echo "# Updating path to include blast path" >> ~/.bashrc
-echo "export PATH=\$PATH:/home/ubuntu/ncbi-blast-2.5.0+/bin" >> ~/.bashrc
-echo "# Updating BLASTDB path" >> ~/.bashrc
-echo "export BLASTDB=/home/ubuntu/blastdb" >> ~/.bashrc
+echo "# Updating path to include blast path" >> ~/.bash_profile
+echo "export PATH=\$PATH:/home/ubuntu/ncbi-blast-2.5.0+/bin" >> ~/.bash_profile
+echo "# Updating BLASTDB path" >> ~/.bash_profile
+echo "export BLASTDB=/home/ubuntu/blastdb" >> ~/.bash_profile
 
 # download DB, decompress
 echo "Downloading BLAST databases:"
