@@ -47,17 +47,17 @@ sudo apt-get install make gcc perl-doc libblas-dev liblist-moreutils-perl git li
 # download blast
 echo "Downloading BLAST+:"
 cd ~
-wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.5.0/ncbi-blast-2.5.0+-x64-linux.tar.gz
-tar zxf ncbi-blast-2.5.0+-x64-linux.tar.gz
-rm ncbi-blast-2.5.0+-x64-linux.tar.gz
-cd ~/ncbi-blast-2.5.0+/bin/
-export PATH=$PATH:/home/ubuntu/ncbi-blast-2.5.0+/bin
+wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.6.0/ncbi-blast-2.6.0+-x64-linux.tar.gz
+tar zxf ncbi-blast-2.6.0+-x64-linux.tar.gz
+rm ncbi-blast-2.6.0+-x64-linux.tar.gz
+cd ~/ncbi-blast-2.6.0+/bin/
+export PATH=$PATH:/home/ubuntu/ncbi-blast-2.6.0+/bin
 
 
 # updating environment variables
 echo "Adding environment variables to path..."
 echo "# Updating path to include blast path" >> ~/.bash_profile
-echo "export PATH=\$PATH:/home/ubuntu/ncbi-blast-2.5.0+/bin" >> ~/.bash_profile
+echo "export PATH=\$PATH:/home/ubuntu/ncbi-blast-2.6.0+/bin" >> ~/.bash_profile
 echo "# Updating BLASTDB path" >> ~/.bash_profile
 echo "export BLASTDB=/home/ubuntu/blastdb" >> ~/.bash_profile
 
